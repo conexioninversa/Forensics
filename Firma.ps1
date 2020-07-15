@@ -77,4 +77,4 @@ write-host "----------------------------------------------------"
 write-host "                    RESULTADOS                      "
 write-host "----------------------------------------------------"
 write-host " "
-Get-Content -Path c:\temp\EsdadoDeFirma.json
+Get-Content -Path c:\temp\EstadoDeFirma.json
