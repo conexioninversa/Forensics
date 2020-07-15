@@ -44,7 +44,7 @@ function EstadoDelEjecutable($EjecutableRevisar, $ResultadoDeFirma)
     $sha256 = Get-FileHash -Algorithm SHA256 $EjecutableRevisar.FullName
     $ResultadoHash = $ResultadoDeFirma | Select-Object *, @{n="FileHashMd5"; e={$md5.Hash}}, @{n="FileHashSha256"; e={$sha256.Hash}}
     $ResultadoJSON = $ResultadoHash | ConvertTo-Json -Depth 4
-    $ResultadoJSON | Out-File -Append $OutputFilePath"\EsdadoDeFirma.json"
+    $ResultadoJSON | Out-File -Append $OutputFilePath"\EstadoDeFirma.json"
 }
 
 function ComprobacionFirma($Directorio)
