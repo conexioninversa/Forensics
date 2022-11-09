@@ -7,6 +7,7 @@ Forensic scripts for collecting artifacts
 in the folder c:\temp with the filename 'Status.json'
 
 `PARAMETER Status` An optional parameter; defines which states to report on. It can be Unsigned (default), Unknown Error, Valid or All.
+
 `PARAMETER OutputFile` An optional parameter; defines where to write the results. The default value is "C:\temp"
 
 Unsigned files in these folders could be an indication of lateral movement, which is used by attackers
