@@ -3,7 +3,7 @@
 Forensic scripts for collecting artifacts
 
 * `Smell.ps1` - Acquisition of volatile artifacts with PowerShell
-* `MPowerShell_Signed.ps1` - Checks the digital signature of the DLL and EXE files in the folders c:\windows\system32 and C:\Windows\SysWOW64\. The result is saved
+* `PowerShell_Signed.ps1` - Checks the digital signature of the DLL and EXE files in the folders c:\windows\system32 and C:\Windows\SysWOW64\. The result is saved
 in the folder c:\temp with the filename 'Status.json'
 
 `PARAMETER Status` An optional parameter; defines which states to report on. It can be Unsigned (default), Unknown Error, Valid or All.
