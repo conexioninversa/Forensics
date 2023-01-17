@@ -12,3 +12,6 @@ in the folder c:\temp with the filename 'Status.json'
 
 Unsigned files in these folders could be an indication of lateral movement, which is used by attackers
 for lateral movement between machines. The results are saved by default in "C:\temp"
+
+* `WIFIPassView.ps1` - This script allows you to obtain the list of WIFI connected to the equipment and their stored passwords.
+The result is written to the WIFIPassView.csv file
