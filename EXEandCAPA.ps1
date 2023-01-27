@@ -1,6 +1,35 @@
-$folder = "D:\evidencia_ficheros"
-$capa = "D:\evidencia_ficheros\capa.exe"
-$outputFile = "D:\evidencia_ficheros\resultados.txt"
+# Get Start Times
+$script:StartTime_Processing = (Get-Date)
+$script:StartTime_Analysis = (Get-Date)
+
+# Logo
+$Logo = @"
+
+███████ ██   ██ ███████  █████  ███    ██ ██████   ██████  █████  ██████   █████  
+██       ██ ██  ██      ██   ██ ████   ██ ██   ██ ██      ██   ██ ██   ██ ██   ██ 
+█████     ███   █████   ███████ ██ ██  ██ ██   ██ ██      ███████ ██████  ███████ 
+██       ██ ██  ██      ██   ██ ██  ██ ██ ██   ██ ██      ██   ██ ██      ██   ██ 
+███████ ██   ██ ███████ ██   ██ ██   ████ ██████   ██████ ██   ██ ██      ██   ██ 
+                                                                                                                                                                 
+"@
+
+Write-Host ""
+Write-Host "$Logo"
+
+# Header
+Write-Output ""
+Write-Output "EXEandCAPA - Analyze executables automatically on a folder"
+Write-Output "Get cape on: --> https://github.com/mandiant/capa/releases/tag/v4.0.1"
+Write-Output ""
+
+# Analysis date (ISO 8601)
+$AnalysisDate = $Date -replace "T", " " # YYYY-MM-DD hh:mm:ss
+Write-Output "Analysis date: $AnalysisDate UTC"
+Write-Output ""
+
+$folder = "d:\source"
+$capa = "d:\app\capa.exe"
+$outputFile = "d:\results.txt"
 
 # Get all executable files in the specified folder
 $executables = Get-ChildItem $folder -Include *.exe -Recurse
