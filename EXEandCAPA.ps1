@@ -19,7 +19,7 @@ Write-Host "$Logo"
 # Header
 Write-Output ""
 Write-Output "EXEandCAPA - Analyze executables automatically on a folder"
-Write-Output "Get cape on: --> https://github.com/mandiant/capa/releases/tag/v4.0.1"
+Write-Output "Get capa on: --> https://github.com/mandiant/capa/releases/tag/v4.0.1"
 Write-Output ""
 
 # Analysis date (ISO 8601)
