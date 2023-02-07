@@ -14,8 +14,8 @@ param (
     [string]$outputPath = "$env:temp\"
 )
 
-$ss = Get-CimInstance -ClassName MSFT_StorageSubSystem -Namespace Root\Microsoft\Windows\Storage;
-Invoke-CimMethod -InputObject $ss -MethodName "GetDiagnosticInfo" -Arguments @{DestinationPath=$outputPath; IncludeLiveDump=$true};
+$me = Get-CimInstance -ClassName MSFT_StorageSubSystem -Namespace Root\Microsoft\Windows\Storage;
+Invoke-CimMethod -InputObject $me -MethodName "GetDiagnosticInfo" -Arguments @{DestinationPath=$outputPath; IncludeLiveDump=$true};
 
 
 # Replace "$env:temp\" with a route from your computer disk or add a route as a parameter to the script
