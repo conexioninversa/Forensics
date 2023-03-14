@@ -9,7 +9,7 @@
 # This script allows you to dump the Kernel part of the ram without using any external tool
 
 param (
-    [string]$outputPath = "$env:temp\"
+    [string]$outputPath 
 )
 
 $TypeDef = @"
@@ -68,7 +68,7 @@ namespace Api
 
 Add-Type -TypeDefinition $TypeDef -Language CSharpVersion3 -IgnoreWarnings
 
-$FileName = $outputPath
+$FileName = $outputPath + "\Kernel.dmp"
 $FileHandle = [Api.Kernel32]::CreateFile($FileName, 0x10000000, 0, [IntPtr]::Zero, 1, 0x80, [IntPtr]::Zero)
 
 $DumpControl = New-Object -TypeName Api.SYSDBG_LIVEDUMP_CONTROL
